@@ -2,12 +2,12 @@ package entites;
 
 public class AdressePostale {
 
-	int numeroRue;
-	String libelleRue;
-	int codePostal;
-	String ville;
+	public int numeroRue;
+	public String libelleRue;
+	public int codePostal;
+	public String ville;
 
-	AdressePostale (int numeroRue, String libelleRue, int codePostal, String ville) { //constructeur
+	public AdressePostale (int numeroRue, String libelleRue, int codePostal, String ville) { //constructeur
 		
 		this.numeroRue = numeroRue;
 		this.libelleRue = libelleRue;
