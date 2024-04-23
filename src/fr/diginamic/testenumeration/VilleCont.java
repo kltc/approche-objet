@@ -1,29 +1,30 @@
-package listes;
+package fr.diginamic.testenumeration;
 
-public class Ville {
-
+public class VilleCont {
 	private String nom;
 	private int habitants;
+	private Continent continent;
 
-	public Ville(String nom, int habitants) {
+	public VilleCont(String nom, int habitants, Continent continent) {
 		super();
 		this.nom = nom;
 		this.habitants = habitants;
+		this.continent = continent;
 	}
 
 	@Override
 	public String toString() {
-		return "[nom=" + nom + ", habitants=" + habitants + "]";
+		return nom + " " + habitants + " habitants" + " " + continent;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 
-		if (!(obj instanceof Ville)) {
+		if (!(obj instanceof VilleCont)) {
 			return false;
 		}
 
-		Ville autre = (Ville) obj;
+		VilleCont autre = (VilleCont) obj;
 
 		int population = autre.getHabitants();
 		String nom = autre.getNom();
@@ -52,6 +53,14 @@ public class Ville {
 
 	public void setHabitants(int habitants) {
 		this.habitants = habitants;
+	}
+
+	public Continent getContinent() {
+		return continent;
+	}
+
+	public void setContinent(Continent continent) {
+		this.continent = continent;
 	}
 
 }
